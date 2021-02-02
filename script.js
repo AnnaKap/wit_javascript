@@ -58,13 +58,3 @@ clickToHideFunc('level6_button1', 'level6_answer1');
 clickToHideFunc('level6_button2', 'level6_answer2');
 
 clickToHideAndShow('level3_section_button_intro', 'level3_intro_section', "level3_section2")
-
-
-console.log("Hello world");
-console.log("THIS IS STEP TWO!!!");
-console.log("this is your web browser's console");
-console.log("you are recieving this message from your 'script.js' file in vscode");
-console.log("find your script.js file and write a message to your page");
-console.log("to write a messgae to your page use the document object")
-console.log("write document.write('with your message here')' in your script.js file");
-
