@@ -50,6 +50,13 @@ clickToHideFunc('level4_button1', 'level4_answer1');
 clickToHideFunc('level4_button2', 'level4_answer2');
 clickToHideFunc('level4_button3', 'level4_answer3');
 
+clickToHideFunc('level5_button1', 'level5_answer1');
+clickToHideFunc('level5_button2', 'level5_answer2');
+clickToHideFunc('level5_button3', 'level5_answer3');
+
+clickToHideFunc('level6_button1', 'level6_answer1');
+clickToHideFunc('level6_button2', 'level6_answer2');
+
 clickToHideAndShow('level3_section_button_intro', 'level3_intro_section', "level3_section2")
 
 

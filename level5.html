@@ -13,53 +13,47 @@
 <body>
   <h1>Welcome to level 5! We will learn about arrays & loops in Javascript!!</h1>
 
-  <h2>An array is a list of items contained within brakets that looks like this
+  <h2>About Arrays</h2>
+  <h3>An array is a list of items contained within brakets that looks like this
     <pre>
       <code>
         let anArray = ["one", 2, 3];
       </code>
     </pre>
-  </h2>
+  </h3>
 
-  <h2>
+  <h3>
     Arrays hold information about what position a value is in the list, so to access them you can use their index values that correspond to their order.
-  </h2>
-  <h2>
+  </h3>
+  <h3>
     For example to get the first value from "anArray", we would do the following 
     <pre>
       <code>
         let anArray = ["one", 2, 3];
-        let firstValue = anArray[0] --> will get you value "one";
+        let firstValue = anArray[0]; --> will get you value "one"
       </code>
     </pre>
-  </h2>
-  <h2> to keep getting more values further down we would increase our index value</h2>
-  <h2> other info you can get from an array is its length
+  </h3>
+  <h3> to keep getting more values further down we would increase our index value</h3>
+  <h3> other info you can get from an array is its length
     <pre>
       <code>
         let anArray = ["one", 2, 3];
-        let length = anArray.lenght() --> will get you value 3;
+        let length = anArray.length(); --> will get you value 3
       </code>
     </pre>
-  </h2>
+  </h3>
 
   <h2>Lets write a function in which a user can input an array and can recive back it's length</h2>
   <ul>
     <li>open up level5.js in vscode</li>
     <li>declare a function with the name <strong>arrayLength</strong></li>
-    <li>allow a user to input an array as an argument</li>
-    <li>return the array length value</li>
+    <li>allow a user to input an array as an argument to your <strong>arrayLength</strong> function</li>
+    <li><strong>return</strong> the array length value</li>
     <li>create an array and declare it to a variable caled <strong>myArray</strong> </li>
     <li>call your function arrayLength and pass your array as an argument</li>
     <li>set the return value as a variable called <strong>myArrayLength</strong></li>
-    <li>to attatch your code to an element on the page copy and past this line below your answer in level5.js:
-      <pre>
-        <code>
-          let div = document.getElementById('arrayAnswer');
-          div.appendChild(<h2>{myArrayLength}</h2>);
-        </code>
-      </pre>
-    </li>
+    <li>to attatch your code to an element on the page un-comment the lines below your function in level5.js</li>
   </ul>
 
   <button id="level5_button1">Click to reveal answer</button>
@@ -77,10 +71,119 @@
       </code>
     </pre>
   </div>
-  <!-- button to reveal answer -->
-  <!-- instructions to paste a document.append line to see answer in the document -->
 
-  <div id="arrayAnswer"></div>
+  <div >
+    <h3 id="arrayAnswer">you array length answer is: </h3>
+  </div>
+  <br>
+
+  <h2>Now let's use an array again with a loop in our function to make a list</h2>
+  <h2>First lets breakdown the loop</h2>
+  <h2>To loop through an array we can use the for loop syntax</h2>
+  <pre>
+    <code>
+      for(let i = 0; i < items.length; i++) {
+        console.log(items[i]);
+      }
+    </code>
+  </pre>
+  <ol>
+    <li>this for loop instatiates a variable i: let i = 0</li>
+    <li>then sets a boolean statement that says, as long as i is less than items.length increase i (which is the i++ part)</li>
+    <li>everytime you enter the loop you recieve a console.log with the item at index i</li>
+    <li>once i is increased to equal or be greater than items.length the loop will end</li>
+  </ol>
+
+  <h2>Now lets ACTUALLY create a looping function</h2>
+  <ul>
+    <li>open level5.js in vscode</li>
+    <li>declare a function called <strong>createList</strong> under the code you created previously</li>
+    <li>allow you <strong>createList</strong> to take one array as an argument</li>
+    <li>create a for loop like the one in the example above</li>
+    <li>make sure that you replace the variable items with the argument name for your array</li>
+    <li>create a variable called <strong>stringArray</strong> that contains an array of your top fave movies as strings</li>
+    <li>call your function and pass in <strong>stringArray</strong> as an argument</li>
+    <li>open up your web console and see that your movies are being listed</li>
+  </ul>
+  
+  <button id="level5_button2">Click to reveal answer</button>
+  <div id="level5_answer2" class="hidden">
+    <pre>
+      <code>
+        function createList(array) {
+          for (let i = 0; i < array.length; i++) {
+            console.log(array[i]);
+          }
+        }
+
+        let stringArray = ['batman', 'inception', 'lord of the rings'];
+
+        let list = createList(stringArray);
+      </code>
+    </pre>
+  </div>
+
+  <h2>Great! Now lets add those movies as a list below</h2>
+
+  <ul>
+    <li>in your for loop instead of console.log lets grab an element that will contain your list</li>
+    <li>
+      i have set up an element with an id of 
+      <strong>faveMovies</strong> so to grab it copy the code below 
+      and insert it in your function <strong>before</strong> your for loop
+    </li>
+    <pre>
+      <code>
+        let listElm = document.getElementById('faveMovies');
+      </code>
+    </pre>
+    <li> next within your for loop lets create an element for each list item</li>
+    <pre>
+      <code>
+        let listItem = document.createElement('li');
+      </code>
+    </pre>
+    <li>and now lets set the text within this elements tag to be the current movie in your list</li>
+    <pre>
+      <code>
+        listItem.innerHTML = array[i];
+      </code>
+    </pre>
+    <li>finally lets append your list element to the main list container</li>
+    <pre>
+      <code>
+        listElm.append(listItem);
+      </code>
+    </pre>
+    <li>if all goes well your movies should appear in the list below</li>
+  </ul>
+
+  <button id="level5_button3">Click to reveal answer</button>
+  <div id="level5_answer3" class="hidden">
+    <pre>
+      <code>
+        function createList(array) {
+          let listElm = document.getElementById('faveMovies');
+          for (let i = 0; i < array.length; i++) {
+            let listItem = document.createElement('li');
+            listItem.innerHTML = array[i];
+            listElm.append(listItem);
+          }
+        }
+        
+        let stringArray = ['batman', 'inception', 'lord of the rings'];
+        
+        createList(stringArray);
+      </code>
+    </pre>
+  </div>
+
+  <h2>my fave movies are:</h2>
+  <div id="faveMovies">
+   
+  </div>
+
+  <a href="level6.html">Click to go to final level!!</a>
 
   <script src="script.js"></script>
   <script src="level5.js"></script>

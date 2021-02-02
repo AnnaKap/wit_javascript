@@ -24,27 +24,5 @@
 ## 🖥  Level 2: Const and Let
 1. After you have completed the instructions from your web console close the browser
 2. In terminal run `open -a "Google Chrome" level2.html` to open your second html file in the browser
-<br>
-<br>
-
-
-### 🖥  Level 3: Declaring Functions
-#### console.log
-<br>
-
-### 🖥  If statements
-#### throw statements
-<br>
-
-### 🖥  Arrays
-<br>
-
-### 🖥  Loops
-<br>
-
-### 🖥  Class
-#### instantiate class
-#### make method of class
-<br>
 
 

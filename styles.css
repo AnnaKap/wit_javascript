@@ -1,3 +1,17 @@
 .hidden {
   display: none;
 }
+
+#box {
+  width: 100px;
+  height: 100px;
+  border: solid 1px black;
+  text-align: center;
+}
+
+#circle {
+  width: 100px;
+  height: 100px;
+  border: solid 1px black;
+  text-align: center;
+}

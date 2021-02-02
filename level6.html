@@ -1,0 +1,122 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title> Javascript Workshop: Level 6</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+  <h1>Welcome to level 6! In this level we will go over some basic js syntax of a class!!</h1>
+
+  <h2>Classes are the same as those that you have been working on in python</h2>
+  <h2>Here we will use a class to create basic functionality for targeting an html element and customizing it</h2>
+  <ul>
+    <li>Below you have two elements, one named <strong>box</strong> and one named <strong>circle</strong></li>
+    <li>we will create a class Box and Circle to be able to target these elements and change their colors</li>
+  </ul>
+
+  <div id="box">BOX</div>
+  <div id="circle">CRICLE</div>
+
+  <ul>
+    <li>open level6.js in vscode</li>
+    <li>you will see a class Box defined, with a constructor that takes an elementId</li>
+    <li>this will allow us to instatiate a box class and pass through an elementId corresponding to our html element</li>
+    <li>the element that we are targeting in the contructor gets stored as the value <storng>this.box</storng> within the class</li>
+    <li>there is also an addColor <strong>method</strong> that we will work on to add a color to our element</li>
+    <li></li>
+  </ul>
+  
+  <h2>Lets work on the addColor method</h2>
+  <ul>
+    <li>to access and set the styles of an html element we can write <strong>element.style</strong></li>
+    <li>so in our case our targeted element is <strong>this.box</strong>, that means we need to write <strong>this.box.style</strong> to access/set styles</li>
+    <li>more specifically we want to access the color style, so we will write <strong>this.box.style.backgroundColor</strong></li>
+    <li> add this line to your add color method and set it equal to a string of a color (ie "blue")</li>
+    <li>let's intialize a new box class and pass it the element id <storng>box</storng> as the argument</li>
+    <pre>
+      <code>
+        let myBox = new Box(...elementId goes in here as a string);
+      </code>
+    </pre>
+    <li>now call the add color method by adding a line 
+      <pre>
+        <code>
+          myBox.addColor();
+        </code>
+      </pre>
+    </li>
+  </ul>
+
+  <h2>Lets customize addColor so a user can choose a color</h2>
+  <ul>
+    <li>add an argument to add color and set <strong>this.box.style.backgroundColor</strong> to equal this value</li>
+    <li>now call your method <strong>addColor</strong> and pass in a string of a different color (maybe "yellow"?)</li>
+  </ul>
+  
+  <button id="level6_button1">Click to reveal answer</button>
+
+  <div id="level6_answer1" class="hidden">
+    <pre>
+      <code>
+        class Box {
+          constructor(elementId){
+            this.box = document.getElementById(elementId)
+          }
+        
+          addColor(color) {
+            this.box.style.backgroundColor = color;
+          }
+        }
+        
+        let myBox = new Box('box');
+        myBox.addColor('yellow');
+      </code>
+    </pre>
+  </div>
+
+  <h2>Ok now that we've done the square lets do the same for the circle, but this time you got it!</h2>
+  <ul>
+    <li>declare a class called circle</li>
+    <li>pass an elementId as an argument to the consturctor and use it to target the element and set it as the value <strong>this.cirlce</strong></li>
+    <li>our circle is looking a bit square so lets round it up</li>
+    <li>within the constructor apply a style of <strong>borderRadius</strong> and set it equal to <strong>'50%'</strong></li>
+    <li>now lets add a similar addColor method as box has</li>
+    <li>instatiate the circle class and add a color to it by calling the add color method</li>
+  </ul>
+
+  <button id="level6_button2">Click to reveal answer</button>
+
+  <div id="level6_answer2" class="hidden">
+    <pre>
+      <code>
+        class Circle {
+          constructor(elementId){
+            this.circle = document.getElementById(elementId);
+            this.circle.style.borderRadius = '50%';
+          }
+        
+          addColor(color) {
+            this.circle.style.backgroundColor = color;
+          }
+        }
+        
+        let myCircle = new Circle('circle');
+        myCircle.addColor('orange');
+      </code>
+    </pre>
+  </div>
+
+
+  
+  <script src="script.js"></script>
+  <script src="level6.js"></script>
+  
+</body>
+</html>
