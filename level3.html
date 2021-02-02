@@ -1,0 +1,173 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title> Javascript Workshop: Level 3</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  
+  <script src="level3.js"></script>
+
+  <section id="level3_intro_section">
+    <h1>WELCOME TO LEVEL 3</h1>
+
+    <h2>Here we will learn about functions in JS</h2>
+
+    <h2>There are a bunch of already made functions available to you via JS</h2>
+    <ul>
+      <li>console.log("statement"); --> prints to your web console</li>
+      <li>document.write("statement"); --> writes to your html document</li>
+      <li>widnow.alert("AHH"); --> ????</li>
+    </ul>
+
+    <h2>What does window.alert do?</h2>
+    <h2>Open up level3.js in vscode and try it out</h2>
+
+    <button id="level3_button1">Click for hint</button>
+
+    <div id="level3_answer1" class="hidden">
+      <pre>
+        <code>
+          window.alert("AHH");
+          will create a pop up alert for your user in the browser
+        </code>
+      </pre>
+    </div>
+  </section>
+  <button id="level3_section_button_intro">
+    click me to go to the next section!!!!!
+  </button>
+
+  <section id="level3_section2" class="hidden">
+    <h2>SWEEET! now lets write our own functions</h2>
+    <h2>How you ask?</h2>
+    <ul>
+      <li>like const or let vars we need to use a keyword to declare a function</li>
+      <li>keyword is: function</li>
+      <li>below is the code for declaring a function hello</li>
+    </ul>
+    <pre>
+      <code>
+        function hello(){
+          ...make it do things..
+        }
+      </code>
+    </pre>
+
+    <h2>Lets make this function print out a message in the console</h2>
+    <ul>
+      <li>open up level3.js in vscode</li>
+      <li>on line 6 replace "...make it do things..." with your code</li>
+      <li>then to "call" or activate your function write the function's name followed by "()"</li>
+    </ul>
+
+    <button id="level3_button2">click to reveal answer</button>
+    <div id="level3_answer2" class="hidden">
+      <pre>
+        <code>
+          function hello(){
+            console.log("this message!!!!");
+          }
+          hello();
+        </code>
+      </pre>
+    </div>
+
+    <h2>Now lets add arguments to this function to customize our message that is being printed</h2>
+    <ul>
+      <li>open up level3.js in vscode</li>
+      <li>on line 5 add an argument of "message", containing your message, to your function hello</li>
+      <li>remember to also pass in your argument to your function call</li>
+      <li>then open up your web console and check that your message is being printed</li>
+    </ul>
+
+    <button id="level3_button3">click to reveal answer</button>
+    <div id="level3_answer3" class="hidden">
+      <pre>
+        <code>
+          function hello(message){
+            console.log(message);
+          }
+          hello("this is a cool message!");
+        </code>
+      </pre>
+    </div>
+
+    <h2>Finally lets make a function that will add two numbers for us and actually return a value</h2>
+    <ul>
+      <li>open up level3.js in vscode</li>
+      <li>uncomment lines 13-15</li>
+      <li>we want to be able to <stron>input</stron> 2 values in to the function and recieve back 1 value (the addition of the 2 previous values)</li>
+      <li>our inputs are our arguments, lets call them "a" and "b"</li>
+      <li>where in our function do we place "a" and "b"</li>
+    </ul>
+
+    <button id="level3_button4">click to reveal answer</button>
+    <div id="level3_answer4" class="hidden">
+      <pre>
+        <code>
+          because "a" and "b" are our inputs to the function
+          they will go into the function as arguments, seperated by commas
+          
+          function add(a,b){
+             // doing something...
+          }
+        </code>
+      </pre>
+    </div>
+
+    <ul>
+      <li>we want function add to return our added two values</li>
+      <li>we can add "a" and "b" with the addition operator "+"</li>
+      <li>and we can tell our function to return a value with the keyword "return"</li>
+      <li>add the two arguments together and return that value</li>
+    </ul>
+
+    <button id="level3_button5">click to reveal answer</button>
+    <div id="level3_answer5" class="hidden">
+      <pre>
+        <code>
+          function add(a,b){
+             return a+b;
+          }
+        </code>
+      </pre>
+    </div>
+
+    <ul>
+      <li>we can "call" our function and store its return value in a variable</li>
+      <li>let's do that and console.log or document.write our variable to see our function ADD</li>
+    </ul>
+
+    <button id="level3_button6">click to reveal answer</button>
+    <div id="level3_answer6" class="hidden">
+      <pre>
+        <code>
+          function add(a,b){
+             return a+b;
+          }
+
+          const added = add(2,3);
+
+
+          // you can pass as many arguments as you would like to print
+          // in your console.log
+          // make sure to wrap strings with quotes
+          // and make sure to seperate arguments with commas
+          console.log("2 + 3 = ", added);
+        </code>
+      </pre>
+    </div>
+
+    <h2>remember: you can use functions to create snippets of reusable code</h2>
+    <a href="level4.html">on to level 4!!</a>
+  </section>    
+  <script src="script.js"></script>
+</body>
+</html>

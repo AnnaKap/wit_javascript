@@ -1,0 +1,121 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title> Javascript Workshop: Level 4</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  
+  <h1>Welcome to level 4! The land of if statements</h1>
+
+  <h2>Within functions we can use if/else statement conditions to make conditional logic</h2>
+  <h2>
+    Let's build a function called <strong>divide</strong> 
+    that takes <strong>two arguments</strong> a & b and returns its result when divided
+
+  </h2>
+    <ul>
+      <li>open level4.js in vscode</li>
+      <li>declare a function called <strong>divide</strong></li>
+      <li>pass in 2 arguments: a & b and return the result of dividing the two</li>
+    </ul>
+
+    <button id="level4_button1">Click for hint</button>
+
+    <div id="level4_answer1" class="hidden">
+      <pre>
+        <code>
+          function subtract(a,b) {
+            return a/b;
+          }
+
+          let five = divide(10,2);
+          console.log("10 divided by two is: ", five);
+        </code>
+      </pre>
+    </div>
+
+  <h2>
+    What happens however, if a user inputs 0 into substract as variable b?
+  </h2>
+
+    <ul>
+      <li>call your function divide and pass in 10 for a and set it to a new variable</li>
+      <li> pass in 10 for a, and pass in 0 for b</li>
+      <li>pass in 2 arguments: a & b and return the result of dividing the two</li>
+      <li>check your console log, what do you get?</li>
+    </ul>
+
+    <button id="level4_button2">Click for hint</button>
+
+    <div id="level4_answer2" class="hidden">
+      <pre>
+        <code>
+          function divide(a,b) {
+            return a/b;
+          }
+
+          let answer = divide(10,0);
+          console.log("10 divided by 0 is: ", answer);
+          <h4>you should get this error: Uncaught ReferenceError: divide is not defined, because you cannot divide by 4</h4>
+        </code>
+      </pre>
+    </div>
+
+    <h2>
+      Using if statements and a nifty throw javascript function we can prevent this error from happening!
+    </h2>
+  
+      <ul>
+        <li>edit the divide function by creating an "if statement" within the function </li>
+        <li>this if statement will catch any function calls where b is zero</li>
+        <li>check for if b is ever zero by using the === operator within your if statement</li>
+        <li>look for syntax help in the code below</li>
+        <pre>
+          <code>
+              // this is your if statement
+              if (b===0) {
+                ..do something
+              }
+          </code>
+        </pre>
+
+        <li>write a throw statement to customize the error your user will see</li>
+        <li>look for syntax help in the code below</li>
+        <pre>
+          <code>
+              throw "your error in quotes";
+          </code>
+        </pre>
+
+      </ul>
+  
+      <button id="level4_button3">Click to reveal answer</button>
+  
+      <div id="level4_answer3" class="hidden">
+        <pre>
+          <code>
+            function divide (a,b) {
+              if(b===0){
+                throw 'cannot divide by zero';
+              }
+              return a/b;
+            }
+  
+            let answer = divide(10,0);
+            console.log("10 divided by 0 is: ", answer);
+          </code>
+        </pre>
+      </div>
+      <a href="level5.html">go on to level five!</a>
+  <script src="script.js"></script>
+  <script src="level4.js"></script>
+  
+</body>
+</html>

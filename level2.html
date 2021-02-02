@@ -1,0 +1,77 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title> Javascript Workshop: Level 2</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body class="levelTwo">
+ 
+  <section id="section1">
+    <h1>Hello and welcome to level 2!!!!</h1>
+    
+    <h2>Here we will learn how to define variables in javascript</h2>
+    <ul>
+      <li>open level2.js in vscode</li>
+      <li>write messageOne and messageTwo to your page using the document.write function</li>
+    </ul>
+    <button id="level2_button1">Click to reveal answer</button>
+    <div id="level2_answer1" class="hidden">
+      <pre>
+        <code>
+          document.write(messageOne);
+          document.write(messageTwo);
+        </code>
+      </pre>
+    </div>
+  </section>
+
+
+  <section id="section2">
+  <h2>Whats the difference between these two variable messageOne and messageTwo?</h2>
+  <ul>
+    <li>messageOne is a <strong>const</strong>, which means you <strong>cannot</strong> re-assign this variable</li>
+    <li>messageTwo is a <strong>let variable</strong>, which mean you <strong>can</strong> re-assign!</li>
+  </ul>
+  <h3>try re-assigning both variables by writting the following code below in level2.js</h3>
+  <pre>
+    <code>
+      messageOne = [[your desired message]];
+      messageTwo = [[your desired message]];
+    </code>
+  </pre>
+
+  <ul>
+    <li>What do you think will happen?</li>
+    <li>open up your console and see if you have errors</li>
+    <li>if so try to fix them by using what you know about let and const</li>
+  </ul>
+
+  <button id="level2_button2">Click to reveal answers about let and const</button>
+  <div id="level2_answer2" class="hidden">
+    <pre>
+      <code>
+        to fix error you can either turn messageOne to a let variable
+        or delete messageOne's re-assignment
+      </code>
+    </pre>
+  </div>
+</section>
+  <button id="level2_button3">Click to Finish Level Two!!</button>
+    <div id="level2_answer3" class="hidden">
+      <a href="level3.html">now we shall enter level 3</a>
+    </div>
+<section>
+
+</section>
+
+  <script src="script.js"></script>
+  <script src="level2.js"></script> 
+
+</body>
+</html>

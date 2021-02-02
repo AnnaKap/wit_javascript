@@ -1,0 +1,89 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title> Javascript Workshop: Level 5</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  <h1>Welcome to level 5! We will learn about arrays & loops in Javascript!!</h1>
+
+  <h2>An array is a list of items contained within brakets that looks like this
+    <pre>
+      <code>
+        let anArray = ["one", 2, 3];
+      </code>
+    </pre>
+  </h2>
+
+  <h2>
+    Arrays hold information about what position a value is in the list, so to access them you can use their index values that correspond to their order.
+  </h2>
+  <h2>
+    For example to get the first value from "anArray", we would do the following 
+    <pre>
+      <code>
+        let anArray = ["one", 2, 3];
+        let firstValue = anArray[0] --> will get you value "one";
+      </code>
+    </pre>
+  </h2>
+  <h2> to keep getting more values further down we would increase our index value</h2>
+  <h2> other info you can get from an array is its length
+    <pre>
+      <code>
+        let anArray = ["one", 2, 3];
+        let length = anArray.lenght() --> will get you value 3;
+      </code>
+    </pre>
+  </h2>
+
+  <h2>Lets write a function in which a user can input an array and can recive back it's length</h2>
+  <ul>
+    <li>open up level5.js in vscode</li>
+    <li>declare a function with the name <strong>arrayLength</strong></li>
+    <li>allow a user to input an array as an argument</li>
+    <li>return the array length value</li>
+    <li>create an array and declare it to a variable caled <strong>myArray</strong> </li>
+    <li>call your function arrayLength and pass your array as an argument</li>
+    <li>set the return value as a variable called <strong>myArrayLength</strong></li>
+    <li>to attatch your code to an element on the page copy and past this line below your answer in level5.js:
+      <pre>
+        <code>
+          let div = document.getElementById('arrayAnswer');
+          div.appendChild(<h2>{myArrayLength}</h2>);
+        </code>
+      </pre>
+    </li>
+  </ul>
+
+  <button id="level5_button1">Click to reveal answer</button>
+  <div id="level5_answer1" class="hidden">
+    <pre>
+      <code>
+        function arrayLength(array) {
+          return array.length();
+        }
+
+        let myArray = [1, 2, 3, 4, 5];
+
+        let myArrayLength = arrayLength(myArray);
+
+      </code>
+    </pre>
+  </div>
+  <!-- button to reveal answer -->
+  <!-- instructions to paste a document.append line to see answer in the document -->
+
+  <div id="arrayAnswer"></div>
+
+  <script src="script.js"></script>
+  <script src="level5.js"></script>
+  
+</body>
+</html>
